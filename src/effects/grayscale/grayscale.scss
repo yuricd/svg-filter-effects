@@ -1,0 +1,10 @@
+.grayscaleEffect {
+  display: block;
+  background: #EEE;
+  height: 100%;
+}
+
+.apply img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}

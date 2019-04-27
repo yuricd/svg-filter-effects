@@ -1,7 +1,7 @@
-import ExampleComponent from './'
+import ThreeD from './effects/3d/3d';
 
-describe('ExampleComponent', () => {
+describe('ThreeD Component', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(ThreeD).toBeTruthy()
   })
 })

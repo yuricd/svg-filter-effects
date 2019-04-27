@@ -1,0 +1,10 @@
+.sepiaEffect {
+  display: block;
+  background: #EEE;
+  height: 100%;
+}
+
+.apply img {
+  filter: sepia(100%);
+  -webkit-filter: sepia(100%);
+}

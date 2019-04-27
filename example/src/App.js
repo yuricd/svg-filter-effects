@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import lenna from './assets/lenna.jpg'
-import { Blur } from 'image-effects'
+import Effect from 'image-effects'
 
 export default class App extends Component {
   render () {
     return (
       <div>
-        <Blur image={lenna} />
+        <Effect 
+          image={lenna}
+          blur={{deviation: 10}}
+          sepia={true}
+         />
       </div>
     )
   }

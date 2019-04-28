@@ -8,8 +8,8 @@ interface Props {
 }
 
 export const ThreeDFilter = (props: Props) => {
-  const { image, width, height } = props
-console.log({width, height});
+  const { image} = props
+
   return (
     <React.Fragment>
       <div className={style.copyRed}>

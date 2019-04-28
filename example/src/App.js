@@ -8,8 +8,10 @@ export default class App extends Component {
       <div>
         <Effect 
           image={lenna}
-          blur={{deviation: 10}}
-          sepia={true}
+          width={500}
+          height={500}
+          blur={{deviation: 0}}
+          threed={true}
          />
       </div>
     )

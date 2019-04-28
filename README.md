@@ -1,4 +1,4 @@
-# image-effects
+# svg-filter-effects
 
 > Add effects to images using SVG filters and CSS.
 

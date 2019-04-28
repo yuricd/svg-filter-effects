@@ -1,0 +1,22 @@
+$opacity: .35;
+$spacement: 10px;
+
+.copyRed {
+  position: absolute;
+  top: 0;
+  opacity: $opacity;
+  
+  img {
+    margin-left: $spacement;
+  }
+}
+
+.copyCyan {
+  position: absolute;
+  top: 0;
+  opacity: $opacity;
+  
+  img {
+    margin-left: -$spacement;
+  }
+}

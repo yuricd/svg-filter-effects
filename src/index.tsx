@@ -1,37 +1,38 @@
-import * as React from 'react';
+import * as React from 'react'
 import { BlurFilter } from './effects/blur/blur'
-import { BlurInterface } from './effects/blur/types';
-import { SepiaFilter } from './effects/sepia/sepia';
+import { BlurInterface } from './effects/blur/types'
+import { SepiaFilter } from './effects/sepia/sepia'
+import { ThreeDFilter } from './effects/threed/threed'
+
+import style from './styles/_default.scss'
 
 interface Props {
   image: string,
+  width?: number,
+  height?: number,
   blur?: BlurInterface,
   sepia?: boolean,
+  threed?: boolean,
 }
 
-interface State {
-  imageEffect: string,
-}
-
-export default class Effect extends React.Component<Props, State> {
+export default class Effect extends React.Component<Props> {
 
   public render() {
-    const { image, blur, sepia } = this.props
+    const { image, width, height, blur, sepia, threed } = this.props
 
     return (
-      <>
-         <div>
+        <div className={style.wrapper} style={(width && height) ? {maxWidth: width, maxHeight: height, overflow: 'hidden'} : undefined}>
           <img 
             src={image} 
             alt="Blurred image" 
+            id="original"
             style={{
               filter: `
-                ${blur && 'url(#apply-blur)'} 
-                ${sepia && 'url(#apply-sepia)'}
+                ${blur ? 'url(#apply-blur)': ''}
+                ${sepia ? 'url(#apply-sepia)' : ''}
               `
             }}
             /> 
-        </div>
       
         {blur && (
           <BlurFilter deviation={blur.deviation} />
@@ -40,7 +41,12 @@ export default class Effect extends React.Component<Props, State> {
         {sepia && (
           <SepiaFilter />
         )}
-      </>
+
+        {threed && (
+          <ThreeDFilter image={image} width={width} height={height} />
+        )}
+      </div>
+
     )
   }
 }

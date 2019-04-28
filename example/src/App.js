@@ -8,7 +8,7 @@ export default class App extends Component {
   render () {
     return (
       <React.Fragment>
-        <h1>Image effects</h1>
+        <h1>SVG Filter effects</h1>
         <div id="app" className="app">
 
           <div className="app__item">
